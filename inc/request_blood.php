@@ -1,6 +1,14 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: root
+ * Date: 7/27/15
+ * Time: 12:34 AM
+ */
+
 
 include_once('../init.php');
+
 
 $name = mysql_real_escape_string($_POST["name"]);
 $email = mysql_real_escape_string($_POST["email"]);
@@ -11,8 +19,9 @@ $group = mysql_real_escape_string($_POST["group"]);
 $amount = mysql_real_escape_string($_POST["amount"]);
 
 
-$query = "INSERT INTO donor_info (DNR_NAME, ADDRESS, AREA, PHONE, EMAIL, BLOOD_GROUP, blood_amount)
-        VALUES('$name', '$address', '$area', '$phone', '$email', '$group' ,$amount)";
+
+$query = "INSERT INTO blood_request (RQSTR_NAME, RQSTR_ADD, AREA, RQSTR_PHONE, RQSTR_EMAIL, BLOOD_GROUP, blood_amount)
+        VALUES('$name', '$address', '$area', '$phone', '$email',  '$group' , $amount)";
 
 
 $result = mysql_query($query, $bd);
@@ -24,4 +33,7 @@ if ($result) {
     echo "Error: " . $query . "<br>" . $bd->error;
 }
 
-header("Location: ../admin.php");
+header("Location: ../index.php");
+
+
+

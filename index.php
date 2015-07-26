@@ -140,9 +140,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-6 col-lg-6">
-                    <h1>Donate Blood ?</h1>
+                    <h1>Request Blood</h1>
+                    <p class="text-muted small">Please fill up all these information (Only for record) </p>
 
-                    <form method="post" action="inc/donate.php">
+                    <form method="post" action="inc/request_blood.php">
                       <div class="form-group">
                         <label for="exampleInputName">Name</label>
                         <input name="name" type="text" class="form-control" id="exampleInputName" placeholder="Kader Molla">
@@ -184,23 +185,14 @@
                         </select>
                       </div>
 
+                        <div class="form-group">
+                            <label for="amount">Blood Amount</label>
+                            <p class="text-muted small">The Unit of Blood Amount is Litre. Just input a number</p>
+                            <input name="amount" type="text" class="form-control" id="amount" placeholder="2">
+                        </div>
+
                       <button type="submit" class="btn btn-default">Submit</button>
                     </form>
-
-                    <div class="modal fade" id="thankyouModal" tabindex="-1" role="dialog" aria-labelledby="thankyouLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <h4 class="modal-title" id="myModalLabel">Thank you for pre-registering!</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <p>You'll be the first to know when Shopaholic launches.</p>                     
-                                    <p>In the meantime, any <a href="http://shopaholic.uservoice.com/" target="_blank">feedback</a> would be much appreciated.</p>
-                                </div>    
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
 

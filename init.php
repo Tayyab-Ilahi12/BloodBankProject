@@ -6,4 +6,3 @@
 	
     //$pdo = Database::connect();
 
- ?>
