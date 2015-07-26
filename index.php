@@ -59,18 +59,18 @@
 
 
                     <div class="list-group">
-                        <?php
-                        $sql = "select DNR_NAME from donor_info";
-                        foreach ($pdo->query($sql) as $row) {
-                        ?>
-
-                            <a href="#" class="list-group-item">
-                                <h4 class="list-group-item-heading"><?php echo $row['DNR_NAME']; ?></h4>
-                                <p class="list-group-item-text text-muted">Donated: 12 times</p>
-                            </a>
-                            <?php
-                        }
-                        ?>
+<!--                        --><?php
+//                        $sql = "select DNR_NAME from donor_info";
+//                        foreach ($pdo->query($sql) as $row) {
+//                        ?>
+<!---->
+<!--                            <a href="#" class="list-group-item">-->
+<!--                                <h4 class="list-group-item-heading">--><?php //echo $row['DNR_NAME']; ?><!--</h4>-->
+<!--                                <p class="list-group-item-text text-muted">Donated: 12 times</p>-->
+<!--                            </a>-->
+<!--                            --><?php
+//                        }
+//                        ?>
 
 
                     </div>
