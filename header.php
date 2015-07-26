@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="container mainlogo">
-            <a href="#"><img src="images/logo.png" alt=""/></a>
+            <a href="index.php"><img src="images/logo.png" alt=""/></a>
         </div>
         <div class="container main_menu">
             <div class="row">
@@ -49,10 +49,24 @@
                             <!-- Note that the .navbar-collapse and .collapse classes have been removed from the #navbar -->
                             <div id="navbar">
                                 <ul class="nav navbar-nav">
-                                    <li class="active"><a href="#">Home</a></li>
+                                    <li class="active"><a href="index.php">Home</a></li>
                                     <li><a href="#app_view_about" id="about_us">About</a></li>
                                     <li><a href="#app_view_contact" id="contact_us">Contact</a></li>
-                                    <li><a href="#signup" data-toggle="modal" data-target=".bs-modal-sm">Login</a></li>
+
+                                    <?php
+                                        if(isset($_SESSION['SESS_MEMBER_ID'])) {
+                                            ?>
+                                                <li><a href="logout.php">Logout</a> </li>
+                                                <li><a href="admin.php">Admin Panel</a> </li>
+                                            <?php
+                                        }
+                                        else {
+                                            ?>
+                                                <li><a href="#signup" data-toggle="modal" data-target=".bs-modal-sm">Login</a></li>
+                                            <?php
+                                        }
+                                    ?>
+
                                 </ul>
                             </div><!--/.nav-collapse -->
                         </div>
