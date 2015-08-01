@@ -60,24 +60,20 @@
                         <p class="text-muted small">The Unit of Blood Amount is Litre. Just input a number</p>
                         <input name="amount" type="text" class="form-control" id="amount" placeholder="2">
                     </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input name="age" type="text" class="form-control" id="age" placeholder="21">
+                    </div>
+                    <div class="form-group">
+                        <label for="weight">Weight (KG)</label>
+                        <input name="weight" type="text" class="form-control" id="weight" placeholder="70">
+                    </div>
+
 
                     <button type="submit" class="btn btn-default">Submit</button>
                 </form>
 
-                <div class="modal fade" id="thankyouModal" tabindex="-1" role="dialog" aria-labelledby="thankyouLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h4 class="modal-title" id="myModalLabel">Thank you for pre-registering!</h4>
-                            </div>
-                            <div class="modal-body">
-                                <p>You'll be the first to know when Shopaholic launches.</p>
-                                <p>In the meantime, any <a href="http://shopaholic.uservoice.com/" target="_blank">feedback</a> would be much appreciated.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
 
                 <?
 

@@ -59,19 +59,30 @@
 
 
                     <div class="list-group">
-<!--                        --><?php
-//                        $sql = "select DNR_NAME from donor_info";
-//                        foreach ($pdo->query($sql) as $row) {
-//                        ?>
-<!---->
-<!--                            <a href="#" class="list-group-item">-->
-<!--                                <h4 class="list-group-item-heading">--><?php //echo $row['DNR_NAME']; ?><!--</h4>-->
-<!--                                <p class="list-group-item-text text-muted">Donated: 12 times</p>-->
-<!--                            </a>-->
-<!--                            --><?php
-//                        }
-//                        ?>
+                        <?php
+                        $i = 0;
+                        $sql = "select DNR_NAME from donor_info";
 
+                        $res = mysql_query($sql, $bd);
+
+                        $res = mysql_fetch_row($res);
+
+                        foreach( $res as $row){
+                            if($i < 5){
+                        ?>
+
+                            <a href="#" class="list-group-item">
+                                <h4 class="list-group-item-heading"><?php echo $row; ?></h4>
+                                <p class="list-group-item-text text-muted">Donated: 12 times</p>
+                            </a>
+                        <?php
+                                $i++;
+                            }
+                            else {
+                                break;
+                            }
+                        }
+                        ?>
 
                     </div>
                 </div>
