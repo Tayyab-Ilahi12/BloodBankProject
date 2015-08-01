@@ -61,27 +61,20 @@
                     <div class="list-group">
                         <?php
                         $i = 0;
-                        $sql = "select DNR_NAME from donor_info";
+                        $sql = "SELECT * from donor_info, blood_info WHERE donor_info.DNR_ID = blood_info.DNR_ID ORDER BY `blood_info`.`BLOOD_AMOUNT` DESC ";
 
-                        $res = mysql_query($sql, $bd);
+                        $result = mysql_query($sql, $bd);
 
-                        $res = mysql_fetch_row($res);
-
-                        foreach( $res as $row){
-                            if($i < 5){
-                        ?>
-
-                            <a href="#" class="list-group-item">
-                                <h4 class="list-group-item-heading"><?php echo $row; ?></h4>
-                                <p class="list-group-item-text text-muted">Donated: 12 times</p>
-                            </a>
-                        <?php
-                                $i++;
+                        for($x = 0; $x < 5; $x++){
+                            if($res_row = mysql_fetch_array($result)){
+                                ?>
+                                <a href="#" class="list-group-item">
+                                    <h4 class="list-group-item-heading"><?php echo $res_row['DNR_NAME']; ?></h4>
+                                    <p class="list-group-item-text text-muted">Donated: <?php echo $res_row['BLOOD_AMOUNT']; ?> Litre</p>
+                                </a>
+                                <?
+                                }
                             }
-                            else {
-                                break;
-                            }
-                        }
                         ?>
 
                     </div>
