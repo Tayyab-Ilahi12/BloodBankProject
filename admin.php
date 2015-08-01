@@ -36,7 +36,7 @@
                             <option>Mohakhali</option>
                             <option>Motijheel</option>
                             <option>Dhanmondi</option>
-                            <option>Bonani</option>
+                            <option>Banani</option>
                         </select>
                     </div>
                     <div class="form-group">

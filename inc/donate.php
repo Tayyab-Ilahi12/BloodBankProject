@@ -24,8 +24,8 @@ $result = mysql_query($query, $bd);
 $temp = mysql_query("SELECT DNR_ID FROM donor_info WHERE EMAIL = '$email' ", $bd);
 $temp = mysql_fetch_row($temp);
 
-$query2 = "INSERT INTO blood_info ( donate_date,age, weight,BLOOD_GROUP,BLOOD_AMOUNT, DNR_ID)
-            VALUES ('$date', $age, $weight, '$group' ,$amount, $temp[0] )";
+$query2 = "INSERT INTO blood_info ( donate_date,age, weight,BLOOD_GROUP,BLOOD_AMOUNT, DNR_ID, branch_name)
+            VALUES ('$date', $age, $weight, '$group' ,$amount, $temp[0], '$area' )";
 
 
 $result2 = mysql_query($query2, $bd);

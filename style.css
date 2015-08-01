@@ -50,9 +50,17 @@ body {
 .nearby_point ul li {
     width: 49%;
     float: left;
+    height: 154px;
 }
 .nearby_point ul li a {
-
+    text-decoration: none;
+}
+.caption {
+    color: #FFF;
+    position: relative;
+    z-index: 2;
+    top: -160px;
+    left: 15px;
 }
 .nearby_point ul li a img {
     margin: 1px 2px 0px 0px;

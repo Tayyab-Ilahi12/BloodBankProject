@@ -28,13 +28,13 @@
             <div class="row">
                 <div class="col-xs-12 col-md-12 col-lg-12 text-center">
                     <div class="logo  text-uppercase">
-                        <h1>BLOOD BANK</h1>
+                        <h1><b>BLOOD BANK</b></h1>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container mainlogo">
-            <a href="index.php"><img src="images/logo.png" alt=""/></a>
+<!--            <a href="index.php"><img src="images/logo.png" alt=""/></a>-->
         </div>
         <div class="container main_menu">
             <div class="row">

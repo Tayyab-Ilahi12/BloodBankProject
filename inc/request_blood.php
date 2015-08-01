@@ -17,11 +17,12 @@ $phone = mysql_real_escape_string($_POST["phone"]);
 $area = mysql_real_escape_string($_POST["area"]);
 $group = mysql_real_escape_string($_POST["group"]);
 $amount = mysql_real_escape_string($_POST["amount"]);
+$hospital = mysql_real_escape_string($_POST["hospital"]);
 
 
 
-$query = "INSERT INTO blood_request (RQSTR_NAME, RQSTR_ADD, AREA, RQSTR_PHONE, RQSTR_EMAIL, BLOOD_GROUP, blood_amount)
-        VALUES('$name', '$address', '$area', '$phone', '$email',  '$group' , $amount)";
+$query = "INSERT INTO blood_request (RQSTR_NAME, RQSTR_ADD, AREA, RQSTR_PHONE, RQSTR_EMAIL, BLOOD_GROUP, blood_amount, hospital)
+        VALUES('$name', '$address', '$area', '$phone', '$email',  '$group' , $amount, '$hospital')";
 
 
 $result = mysql_query($query, $bd);

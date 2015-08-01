@@ -65,7 +65,7 @@
 
                         $result = mysql_query($sql, $bd);
 
-                        for($x = 0; $x < 5; $x++){
+                        for($x = 0; $x < 4; $x++){
                             if($res_row = mysql_fetch_array($result)){
                                 ?>
                                 <a href="#" class="list-group-item">
@@ -87,21 +87,37 @@
                             <li>
                                 <a href="#">
                                     <img class="img-responsive" src="images/slider/slide%20(1).png" alt=""/>
+                                    <span class="caption" style="color: #ffffff">
+                                        <h2>Mohakhali</h2>
+                                        <p>Reserved Blood: <?php $res_row = mysql_fetch_array(mysql_query("SELECT SUM(BLOOD_AMOUNT) FROM blood_info WHERE blood_info.branch_name = 'Mohakhali'", $bd));  echo $res_row[0] > 0 ? $res_row[0] : 0 ; ?> Litre</p>
+                                    </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <img class="img-responsive" src="images/slider/slide%20(1).png" alt=""/>
+                                    <span class="caption" style="color: #ffffff">
+                                        <h2>Banani</h2>
+                                        <p>Reserved Blood: <?php $res_row = mysql_fetch_array(mysql_query("SELECT SUM(BLOOD_AMOUNT) FROM blood_info WHERE blood_info.branch_name = 'Banani'", $bd)); echo $res_row[0] > 0 ? $res_row[0] : 0 ; ?> Litre</p>
+                                    </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <img class="img-responsive" src="images/slider/slide%20(1).png" alt=""/>
+                                    <span class="caption" style="color: #ffffff">
+                                        <h2>Dhanmondi</h2>
+                                        <p>Reserved Blood: <?php $res_row = mysql_fetch_array(mysql_query("SELECT SUM(BLOOD_AMOUNT) FROM blood_info WHERE blood_info.branch_name = 'Dhanmondi'", $bd)); echo $res_row[0] > 0 ? $res_row[0] : 0 ; ?> Litre</p>
+                                    </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <img class="img-responsive" src="images/slider/slide%20(1).png" alt=""/>
+                                    <span class="caption" style="color: #ffffff">
+                                        <h2>Gulshan</h2>
+                                        <p>Reserved Blood: <?php $res_row = mysql_fetch_array(mysql_query("SELECT SUM(BLOOD_AMOUNT) FROM blood_info WHERE blood_info.branch_name = 'Gulshan'", $bd)); echo $res_row[0] > 0 ? $res_row[0] : 0 ; ?> Litre</p>
+                                    </span>
                                 </a>
                             </li>
 
@@ -144,7 +160,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-6 col-lg-6">
-                    <h1>Request Blood</h1>
+                    <h1>Request for Blood</h1>
+                    <p class="bg-success" style="padding: 10px">
+                        <span>We are now serving total </span><?php $res_row = mysql_fetch_array(mysql_query("SELECT COUNT(*) FROM blood_request", $bd)); echo $res_row[0]; ?> <span> Requests</span>
+                    </p>
                     <p class="text-muted small">Please fill up all these information (Only for record) </p>
 
                     <form method="post" action="inc/request_blood.php">
@@ -194,6 +213,12 @@
                             <p class="text-muted small">The Unit of Blood Amount is Litre. Just input a number</p>
                             <input name="amount" type="text" class="form-control" id="amount" placeholder="2">
                         </div>
+
+                        <div class="form-group">
+                            <label for="hospital">Hospital Name</label>
+                            <input name="hospital" type="text" class="form-control" id="hospital" placeholder="Ibn Sina Hospital, Dhaka">
+                        </div>
+
 
                       <button type="submit" class="btn btn-default">Submit</button>
                     </form>
