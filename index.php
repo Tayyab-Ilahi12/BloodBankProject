@@ -230,6 +230,23 @@
                     <div class="who_can">
                         <img class="img-responsive" src="images/who.jpg">
                     </div>
+
+                    <section>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12 col-lg-12">
+                                <h1>Blood Donors Must</h1>
+                                <p class="bg-warning" style="padding: 1px">
+                                    <ul class="bg-danger" style="padding: 30px; font-size: 18px;">
+                                        <li>Be in good general health and feeling well*</li>
+                                        <li>Be at least 17 years old</li>
+                                        <li>Be at least Male - 5'1" || Female - 5'5"</li>
+                                        <li>Weigh at least Male - 130 lbs || Female - 150 lbs</li>
+                                        <li>You may Donate Blood Every 112 days, up to 3 times / year</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>

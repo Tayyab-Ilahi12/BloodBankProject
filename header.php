@@ -130,7 +130,7 @@
                     <div class="control-group">
                       <label class="control-label" for="Email">Email:</label>
                       <div class="controls">
-                        <input id="Email" name="Email" class="form-control" type="text" placeholder="something@mail.com" class="input-large" required="">
+                        <input id="Email" name="username" class="form-control" type="text" placeholder="something@mail.com" class="input-large" required="">
                       </div>
                     </div>
                     
@@ -152,7 +152,6 @@
                       <label class="control-label" for="branch">Branch:</label>
                       <div class="controls">
                         <input id="branch" name="branch" class="form-control" type="text" placeholder="Mahakhali" class="input-large" required="">
-                        
                       </div>
                     </div>
 
