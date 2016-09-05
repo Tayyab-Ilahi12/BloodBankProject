@@ -1,3 +1,7 @@
-# BloodBankProject
+# BloodBank
 
-This is a Project for one my University course
+PHP practice + assignment project(University)
+
+- Raw PHP
+- MySQL
+- HTML,CSS,JS
